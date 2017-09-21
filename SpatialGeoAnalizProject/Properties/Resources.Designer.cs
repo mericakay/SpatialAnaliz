@@ -73,6 +73,16 @@ namespace SpatialGeoAnalizProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap login_form {
+            get {
+                object obj = ResourceManager.GetObject("login-form", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sinerjilogo_fw {
             get {
                 object obj = ResourceManager.GetObject("sinerjilogo.fw", resourceCulture);

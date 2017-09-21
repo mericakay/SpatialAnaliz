@@ -59,6 +59,11 @@ namespace SpatialGeoAnalizProject
         {
             this.Close();
         }
+
+        private void txtSifre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
