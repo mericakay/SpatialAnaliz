@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BE93462B-5BF1-4030-8F3C-C0724D2317A4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SpatialGeoAnalizProject</RootNamespace>
+    <AssemblyName>SpatialGeoAnalizProject</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetBrowser">
+      <HintPath>..\dll\DotNetBrowser.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetBrowser.Chromium">
+      <HintPath>..\dll\DotNetBrowser.Chromium.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql">
+      <HintPath>D:\TESTOKUR_V2\TESTOKUR_V2\bin\Debug\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Control\Accordion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\OpacityEx.cs" />
+    <Compile Include="Control\ResizeBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterPage.Designer.cs">
+      <DependentUpon>MasterPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="orgutEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="orgutEkle.Designer.cs">
+      <DependentUpon>orgutEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ucBilgiEkle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucBilgiEkle.Designer.cs">
+      <DependentUpon>ucBilgiEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucDataEkle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDataEkle.Designer.cs">
+      <DependentUpon>ucDataEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucGocHiziEkle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucGocHiziEkle.Designer.cs">
+      <DependentUpon>ucGocHiziEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucHarita.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucHarita.Designer.cs">
+      <DependentUpon>ucHarita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucHedefEkle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucHedefEkle.Designer.cs">
+      <DependentUpon>ucHedefEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucHedefGrubuEkle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucHedefGrubuEkle.Designer.cs">
+      <DependentUpon>ucHedefGrubuEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucIssizlikEkle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucIssizlikEkle.Designer.cs">
+      <DependentUpon>ucIssizlikEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucKorucuEkle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucKorucuEkle.Designer.cs">
+      <DependentUpon>ucKorucuEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucMuhimmatEkle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucMuhimmatEkle.Designer.cs">
+      <DependentUpon>ucMuhimmatEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucMutlulukEkle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucMutlulukEkle.Designer.cs">
+      <DependentUpon>ucMutlulukEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucNufusBilgisiEkle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucNufusBilgisiEkle.Designer.cs">
+      <DependentUpon>ucNufusBilgisiEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucOlayAnaliz.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucOlayAnaliz.Designer.cs">
+      <DependentUpon>ucOlayAnaliz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucOlayEkle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucOlayEkle.Designer.cs">
+      <DependentUpon>ucOlayEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucOrgutEkle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucOrgutEkle.Designer.cs">
+      <DependentUpon>ucOrgutEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucOrgutElemaniEkle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucOrgutElemaniEkle.Designer.cs">
+      <DependentUpon>ucOrgutElemaniEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucParametre.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucParametre.Designer.cs">
+      <DependentUpon>ucParametre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucRapor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucRapor.Designer.cs">
+      <DependentUpon>ucRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucSecimEkle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucSecimEkle.Designer.cs">
+      <DependentUpon>ucSecimEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucSiyasiPartiEkle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucSiyasiPartiEkle.Designer.cs">
+      <DependentUpon>ucSiyasiPartiEkle.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Control\Accordion.resx">
+      <DependentUpon>Accordion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\ResizeBar.resx">
+      <DependentUpon>ResizeBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterPage.resx">
+      <DependentUpon>MasterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="orgutEkle.resx">
+      <DependentUpon>orgutEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ucHarita.resx">
+      <DependentUpon>ucHarita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucOlayAnaliz.resx">
+      <DependentUpon>ucOlayAnaliz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucOlayEkle.resx">
+      <DependentUpon>ucOlayEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucOrgutEkle.resx">
+      <DependentUpon>ucOrgutEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucParametre.resx">
+      <DependentUpon>ucParametre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucRapor.resx">
+      <DependentUpon>ucRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucSiyasiPartiEkle.resx">
+      <DependentUpon>ucSiyasiPartiEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="rapor\ssss.pdf" />
+    <None Include="Resources\Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sinerjilogo.fw.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
