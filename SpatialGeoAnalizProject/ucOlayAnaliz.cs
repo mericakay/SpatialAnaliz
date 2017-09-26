@@ -23,7 +23,7 @@ namespace SpatialGeoAnalizProject
         {
             String query = " select distinct id, name, description, priority from (SELECT distinct  id, name, description , priority , CAST( CAST (json_array_elements( hedef_tip) AS text) AS integer) as hedef_tip FROM sys_target_type where active =0 and deleted = 0 and id in (SELECT distinct  CAST(CAST (json_array_elements( hedef_tip) AS text) AS integer) as hedef_tip FROM sys_target_type where active =0 and deleted = 0  )    )  as swwww where priority > 0 order by priority , name";
             NpgsqlConnection dataconnect = new NpgsqlConnection(
-             "Server=localhost;Port=5432;User Id=postgres;Password=postgres;Database=dd");
+             "Server=192.168.1.47;Port=5432;User Id=postgres;Password=postgres;Database=dd");
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(query, dataconnect);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -38,7 +38,7 @@ namespace SpatialGeoAnalizProject
         {
             String query = "SELECT distinct  id, name,   description ,priority FROM sys_target_type where active = 0 and deleted = 0  order by priority , name   ";
             NpgsqlConnection dataconnect = new NpgsqlConnection(
-             "Server=localhost;Port=5432;User Id=postgres;Password=postgres;Database=dd");
+             "Server=192.168.1.47;Port=5432;User Id=postgres;Password=postgres;Database=dd");
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(query, dataconnect);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -54,7 +54,7 @@ namespace SpatialGeoAnalizProject
         {
             String query = "SELECT id, name, description, false as kontrol   FROM sys_action_type  where active = 0 and deleted = 0   order by priority , name ";
             NpgsqlConnection dataconnect = new NpgsqlConnection(
-             "Server=localhost;Port=5432;User Id=postgres;Password=postgres;Database=dd");
+             "Server=192.168.1.47;Port=5432;User Id=postgres;Password=postgres;Database=dd");
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(query, dataconnect);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -70,7 +70,7 @@ namespace SpatialGeoAnalizProject
         {
             String query = "SELECT  a.city_id AS id, a.name  AS name,  a.name_eng as description,   CASE (SELECT COUNT(z.id) FROM sys_borough z WHERE z.country_id = a.country_id)  WHEN 0 THEN false  ELSE true END AS kontrol   FROM sys_city a  WHERE a.active = 0 AND a.deleted = 0 and   a.language_id = 647 AND  a.country_id = 91 ORDER BY a.priority ASC, name ";
             NpgsqlConnection dataconnect = new NpgsqlConnection(
-             "Server=localhost;Port=5432;User Id=postgres;Password=postgres;Database=dd");
+             "Server=192.168.1.47;Port=5432;User Id=postgres;Password=postgres;Database=dd");
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(query, dataconnect);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -85,7 +85,7 @@ namespace SpatialGeoAnalizProject
         {
             String query = "SELECT id, name, kisaltma as description , false as kontrol FROM  sys_orgutler where active =0 and deleted =0  order by priority , name  ";
             NpgsqlConnection dataconnect = new NpgsqlConnection(
-             "Server=localhost;Port=5432;User Id=postgres;Password=postgres;Database=dd");
+             "Server=192.168.1.47;Port=5432;User Id=postgres;Password=postgres;Database=dd");
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(query, dataconnect);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -100,7 +100,7 @@ namespace SpatialGeoAnalizProject
         {
             String query = "SELECT  first_group as id ,   description as name , description_eng as description ,   false as kontrol  FROM public.sys_specific_definitions  where main_group = 38 order by first_group";
             NpgsqlConnection dataconnect = new NpgsqlConnection(
-             "Server=localhost;Port=5432;User Id=postgres;Password=postgres;Database=dd");
+             "Server=192.168.1.47;Port=5432;User Id=postgres;Password=postgres;Database=dd");
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(query, dataconnect);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -114,7 +114,7 @@ namespace SpatialGeoAnalizProject
         public void spexecute()
         {
             NpgsqlConnection dataconnect = new NpgsqlConnection(
-             "Server=localhost;Port=5432;User Id=postgres;Password=postgres;Database=dd");
+             "Server=192.168.1.47;Port=5432;User Id=postgres;Password=postgres;Database=dd");
             NpgsqlCommand cmd = new NpgsqlCommand();
             NpgsqlDataReader reader;
             cmd.CommandText = "oki_temp_gisdata_gerceklesmis_olaylar()";
@@ -128,7 +128,7 @@ namespace SpatialGeoAnalizProject
         public void truncateTable()
         {
             NpgsqlConnection dataconnect = new NpgsqlConnection(
-          "Server=localhost;Port=5432;User Id=postgres;Password=postgres;Database=dd");
+          "Server=192.168.1.47;Port=5432;User Id=postgres;Password=postgres;Database=dd");
             string sqlTrunc = "TRUNCATE TABLE public.info_params_olay ";
             NpgsqlCommand cmd = new NpgsqlCommand(sqlTrunc, dataconnect);
             dataconnect.Open();
@@ -162,7 +162,7 @@ namespace SpatialGeoAnalizProject
         public void degerEkle()
         {
             NpgsqlConnection dataconnect = new NpgsqlConnection(
-           "Server=localhost;Port=5432;User Id=postgres;Password=postgres;Database=dd");
+           "Server=192.168.1.47;Port=5432;User Id=postgres;Password=postgres;Database=dd");
             truncateTable();
 
             dataconnect.Open();

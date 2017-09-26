@@ -54,7 +54,7 @@
             this.tabPage2.Controls.Add(this.pictureBox1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(825, 580);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Spatial Analiz Project";
@@ -64,7 +64,7 @@
             // 
             this.pictureBox1.Image = global::SpatialGeoAnalizProject.Properties.Resources.sinerjilogo_fw;
             this.pictureBox1.Location = new System.Drawing.Point(14, 20);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(386, 265);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

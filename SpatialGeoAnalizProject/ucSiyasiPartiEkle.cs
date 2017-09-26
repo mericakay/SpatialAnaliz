@@ -24,7 +24,7 @@ namespace SpatialGeoAnalizProject
             string kisaltma = txtKisaltma.Text.ToString();
             //int derece = comboBox1.SelectedValue.ToString();
             NpgsqlConnection dataconnect = new NpgsqlConnection(
-           "Server=localhost;Port=5432;User Id=postgres;Password=postgres;Database=dd");
+           "Server=192.168.1.47;Port=5432;User Id=postgres;Password=postgres;Database=dd");
             NpgsqlCommand cmd = new NpgsqlCommand();
             dataconnect.Open();
             cmd.Connection = dataconnect;

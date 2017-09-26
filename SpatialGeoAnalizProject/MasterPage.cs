@@ -43,11 +43,11 @@ namespace SpatialGeoAnalizProject
                 page.Controls.Add(control);
                 tabMain.TabPages.Add(page);
             };
-            Button btnOlayAnaliz = new Button { Text = "      Olay Analiz", AutoSize = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 1, BackColor = Color.FromArgb(246, 246, 246) };
+            Button btnOlayAnaliz = new Button { Text = "      Gerçekleşmiş Olaylar", AutoSize = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 1, BackColor = Color.FromArgb(246, 246, 246) };
             btnOlayAnaliz.Click += delegate (object sender, EventArgs e)
             {
                 tabMain.TabPages.Clear();
-                TabPage page = new TabPage("Olay Analiz");
+                TabPage page = new TabPage("Gerçekleşmiş Olaylar");
                 ucOlayAnaliz control = new ucOlayAnaliz();
                 control.Dock = DockStyle.Fill;
                 page.Controls.Add(control);
@@ -262,7 +262,7 @@ namespace SpatialGeoAnalizProject
             Button btnHarita = new Button { Text = "      Harita Aç", AutoSize = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 2, BackColor = Color.FromArgb(246, 246, 246) };
             btnHarita.Click += delegate (object sender, EventArgs e)
             {
-                System.Diagnostics.Process.Start(@"C:\xampp\tomcat\webapps\harita\harita\gis\index.html");
+                System.Diagnostics.Process.Start(@"http://localhost:8081/mapstore/#/viewer/leaflet/0");
 
 
             };

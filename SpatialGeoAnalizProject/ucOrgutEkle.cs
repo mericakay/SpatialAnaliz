@@ -21,7 +21,7 @@ namespace SpatialGeoAnalizProject
         {
             String query = "SELECT first_group,  description  FROM sys_specific_definitions where main_group = 42 order by first_group";
             NpgsqlConnection dataconnect = new NpgsqlConnection(
-             "Server=localhost;Port=5432;User Id=postgres;Password=postgres;Database=dd");
+             "Server=http://192.168.1.47;Port=5432;User Id=postgres;Password=postgres;Database=dd");
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(query, dataconnect);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -37,7 +37,7 @@ namespace SpatialGeoAnalizProject
             string kisaltma = txtkisaltma.Text.ToString();
             //int derece = comboBox1.SelectedValue.ToString();
             NpgsqlConnection dataconnect = new NpgsqlConnection(
-           "Server=localhost;Port=5432;User Id=postgres;Password=postgres;Database=dd");
+           "Server=http://192.168.1.47;Port=5432;User Id=postgres;Password=postgres;Database=dd");
             NpgsqlCommand cmd = new NpgsqlCommand();
             dataconnect.Open();
             cmd.Connection = dataconnect;
