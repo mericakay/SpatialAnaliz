@@ -1,0 +1,54 @@
+
+<html><head></head><body><h1 id="migration-from-2017-01-00-to-2017-02-00">Migration from 2017.01.00 to 2017.02.00</h1>
+<hr />
+<p>The version 2017.02.00 has many improvements and changes:</p>
+<ul>
+<li>introduced <code>redux-observable</code></li>
+<li>updated <code>webpack</code> to version 2</li>
+<li>updated <code>react-intl</code> to version 2.x</li>
+<li>updated <code>react</code> to [version 15.4.2] (<a href="https://facebook.github.io/react/blog/2016/04/07/react-v15.html">https://facebook.github.io/react/blog/2016/04/07/react-v15.html</a>)</li>
+<li>updated <code>react-bootstrap</code> to version 0.30.7</li>
+</ul>
+<p>We suggest you to:</p>
+<ul>
+<li>align your package.json with the latest version of 2017.02.00.</li>
+<li>update your webpack files (see below).</li>
+<li>update your tests to react 15 version. <a href="https://facebook.github.io/react/blog/2016/04/07/react-v15.html#upgrade-guide">see upgrade guide</a></li>
+<li>Update your <code>react-bootstrap</code> custom components with the new one (see below).</li>
+</ul>
+<h2 id="side-effect-management-introduced-redux-observable">Side Effect Management - Introduced redux-observable</h2>
+<p>To manage complex asynchronous operations the thunk middleware is not enough.
+When we started with MapStore 2 there was no alternative to thunk. Now we have some options. After a spike (results available <a href="https://github.com/geosolutions-it/MapStore2/issues/1420">here</a>) we chose to use redux-observable.
+For the future, we strongly recommend to use this library to perform asynchronous tasks.</p>
+<p>Introducing this library will allow to :</p>
+<ul>
+<li>remove business logic from the components event handlers</li>
+<li>now all new  <code>actionCreators</code> should return pure actions. All async stuff will be deferred to the epics.</li>
+<li>avoid bouncing between components and state to trigger side effect</li>
+<li>speed up development with <code>rxjs</code> functionalities</li>
+<li>Existing thunk integration will be maintained since all the thunks will be replaced.</li>
+</ul>
+<p>If you are using the Plugin system and the StandardStore, you may have only to include the missing new dependencies in your package.json (redux-observable and an updated version of redux).</p>
+<p>Check the current package.json to get he most recent versions. For testing we included also redux-mockup-store as a dependency, but you are free to test your epics as you want.</p>
+<p>For more complex integrations check <a href="https://github.com/geosolutions-it/MapStore2/pull/1471">this</a> pull request to see how to integrate redux-observable or follow the guide on the <a href="https://redux-observable.js.org/">redux-observable site</a>.</p>
+<h2 id="webpack-update-to-version-2">Webpack update to version 2</h2>
+<p>We updated webpack (old one is deprecated), check <a href="https://github.com/geosolutions-it/MapStore2/pull/1491">this pull request</a> to find out how to update your webpack files.
+here a list of what we had to update:</p>
+<ul>
+<li>module.loaders are now module.rules</li>
+<li>update your package.json with latest versions of webpack, webpack plugins and karma libs and integrations (Take a look to the changes on package.json in the pull request if you want a detailed list of what to update in this case).</li>
+<li>change your test proxy configuration with the new one.</li>
+</ul>
+<p>More details on the <a href="https://webpack.js.org/guides/migrating/">webpack site</a>.</p>
+<h2 id="react-intl-update-to-2-x">react-intl update to  2.x</h2>
+<p>See <a href="https://github.com/geosolutions-it/MapStore2/pull/1495/files">this pull request</a> for the details. You should only have to update your package.json</p>
+<h2 id="react-update-to-15-4-2">react update to 15.4.2</h2>
+<p>Check this pull request to see how to:</p>
+<ul>
+<li>update your package.json</li>
+<li>update your tests</li>
+</ul>
+<h2 id="react-bootstrap-update">React Bootstrap update</h2>
+<p>The version we are using is not documented anymore, and not too much compatible with react 15 (too many warnings). So this update can not be postponed anymore.
+The bigger change in this case is that the Input component do not exists anymore. You will have to replace all your Input with the proper components, and update the <code>package.json</code>. See <a href="https://github.com/geosolutions-it/MapStore2/pull/1511">this pull request</a> for details.</p>
+</body></html>

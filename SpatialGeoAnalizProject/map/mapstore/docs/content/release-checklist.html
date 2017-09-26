@@ -1,0 +1,36 @@
+
+<html><head></head><body><h1 id="how-to-release">How to release</h1>
+<hr />
+<p>Below you can find the release procedure as a checklist. On each release it can be updated (if needed), copied and pasted into a GitHub issue, of course changing the release name.
+Then you can check each entry on the GitHub issue when done until the release is end.</p>
+<h2 id="release-checklist">Release Checklist</h2>
+<ul class="docma task-list">
+<li class="docma task-item"><input type="checkbox" disabled=""> &nbsp;Create an issue with this checklist in the release milestone.</li>
+<li class="docma task-item"><input type="checkbox" disabled=""> &nbsp;Create a branch (<strong>YYYY.XX.mm</strong>)  </li>
+<li class="docma task-item"><input type="checkbox" disabled=""> &nbsp;Change <a href="http://build.geo-solutions.it/jenkins/view/MapStore2/job/MapStore2-QA-Build/">QA Jenkins job</a> to build the new branch, enable the job continuous deploy</li>
+<li class="docma task-item"><input type="checkbox" disabled=""> &nbsp;Test on QA <a href="http://qa.mapstore2.geo-solutions.it/mapstore/">http://qa.mapstore2.geo-solutions.it/mapstore/</a>  <ul>
+<li>Any fix must be done on both <strong>YYYY.XX.mm</strong> and <strong>master</strong> branch  </li>
+<li>Test <strong>everything</strong>, not only the new features</li>
+</ul>
+</li>
+<li class="docma task-item"><input type="checkbox" disabled=""> &nbsp;Generate the changelog with github_changelog_generator</li>
+<li class="docma task-item"><input type="checkbox" disabled=""> &nbsp;Commit the changelog to the release branch</li>
+<li class="docma task-item"><input type="checkbox" disabled=""> &nbsp;Create a <a href="https://github.com/geosolutions-it/MapStore2/releases">github draft release</a> pointing to the branch <strong>YYYY.XX.mm</strong>.  <blockquote>
+<p>The Release name should follow be named YYYY.XX.mm where YYYY is the year, XX is the incremental number of the release for the current year (starting from 01) and the second number mm is an incremental value (starting from 00) to increment for minor releases. Insert the tag YYY.XX.mm to create when the release is published. In the release description describe the major changes and link the Changelog paragraph.</p>
+</blockquote>
+</li>
+<li class="docma task-item"><input type="checkbox" disabled=""> &nbsp;Launch <a href="http://build.geo-solutions.it/jenkins/job/MapStore2-Releaser/">MapStore2-Releaser</a> Jenkins job setting up the correct name of the version (<strong>and wait the end</strong>). <strong>Note:</strong> Using the MapStore2 Releaser allows to write the correct version number into the binary packages.</li>
+<li class="docma task-item"><input type="checkbox" disabled=""> &nbsp;Get the <a href="http://build.geo-solutions.it/jenkins/view/MapStore2/job/MapStore2-Releaser/ws/web/target/mapstore.war">latest mapstore.war</a> from the Releaser Jenkins build and upload it to github  </li>
+<li class="docma task-item"><input type="checkbox" disabled=""> &nbsp;Get the <a href="http://build.geo-solutions.it/jenkins/view/MapStore2/job/MapStore2-Releaser/ws/release/target/">latest mapstore2-YYYY.XX.mm-bin.zip</a> from the Releaser Jenkins build and upload it to github<blockquote>
+<p>from the job <a href="http://build.geo-solutions.it/jenkins/view/MapStore2/job/MapStore2-Releaser/ws/">configuration page</a> there is a link to access the job workspace to easily download the built WAR and binary package</p>
+</blockquote>
+</li>
+<li class="docma task-item"><input type="checkbox" disabled=""> &nbsp;Publish the release</li>
+<li class="docma task-item"><input type="checkbox" disabled=""> &nbsp;Merge release branch into master</li>
+<li class="docma task-item"><input type="checkbox" disabled=""> &nbsp;Create a blog post</li>
+<li class="docma task-item"><input type="checkbox" disabled=""> &nbsp;Write to the mailing list about the current release news and the next release major changes</li>
+<li class="docma task-item"><input type="checkbox" disabled=""> &nbsp;Update the release procedure if needed.</li>
+<li class="docma task-item"><input type="checkbox" disabled=""> &nbsp;Close this issue</li>
+<li class="docma task-item"><input type="checkbox" disabled=""> &nbsp;Close the related milestone</li>
+</ul>
+</body></html>

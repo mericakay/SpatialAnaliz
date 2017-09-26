@@ -1,0 +1,135 @@
+
+<html><head></head><body><h1 id="building-and-developing">Building and developing</h1>
+<hr />
+<p>Due to the dual nature of the project (Java backend and JavaScript frontend) building and developing using the MapStore 2 framework requires two distinct set of tools</p>
+<ul>
+<li><a href="https://maven.apache.org/">Apache Maven</a> for Java</li>
+<li><a href="https://www.npmjs.com/">NPM</a> for JavaScript.</li>
+</ul>
+<p>A basic knowledge of both tools is required.</p>
+<h1 id="developing-and-debugging-the-mapstore-2-framework">Developing and debugging the MapStore 2 framework</h1>
+<hr />
+<p>To start developing the MapStore 2 framework you have to:</p>
+<ul>
+<li>download developer tools and frontend dependencies locally:</li>
+</ul>
+<p><code>npm install</code></p>
+<p>After a while (depending on the network bandwidth) the full set of dependencies and tools will be downloaded to the <strong>node_modules</strong> subfolder.</p>
+<ul>
+<li>start a development instance of the framework and example applications:</li>
+</ul>
+<p><code>npm run examples</code></p>
+<ul>
+<li>or you can start a development instance <strong>without the examples</strong>:</li>
+</ul>
+<p><code>npm start</code></p>
+<p>Then point your preferred browser to <a href="http://localhost:8081">http://localhost:8081</a>.</p>
+<p>The HomePage contains links to the available demo applications.</p>
+<h3 id="building-the-documentation">Building the documentation</h3>
+<p>MapStore2 uses JSDoc to annotate the components, so the documentation can be automatically generated using <a href="http://onury.github.io/docma/">docma</a>.<br>Please see <a href="http://usejsdoc.org/">http://usejsdoc.org/</a> for further information about code documentation.  </p>
+<p>Refer to the existing files to follow the documentation style:</p>
+<ul>
+<li><a href="https://github.com/geosolutions-it/MapStore2/blob/master/web/client/actions/controls.js">actions</a></li>
+<li><a href="https://github.com/geosolutions-it/MapStore2/blob/master/web/client/reducers/controls.js">reducers</a></li>
+<li><a href="https://github.com/geosolutions-it/MapStore2/blob/master/web/client/components/buttons/FullScreenButton.jsx">components</a></li>
+<li><a href="https://github.com/geosolutions-it/MapStore2/blob/master/web/client/epics/fullscreen.js">epics</a></li>
+<li><a href="https://github.com/geosolutions-it/MapStore2/blob/master/web/client/plugins/Login.jsx">plugins</a></li>
+</ul>
+<p>To install docma:</p>
+<p><code>npm install -g docma</code></p>
+<p>While developing you can generate the documentation to be accessible in the local machine by:</p>
+<p><code>npm run doctest</code></p>
+<p>The resulting doc will be accessible from <a href="http://localhost:8081/mapstore/docs/">http://localhost:8081/mapstore/docs/</a></p>
+<p>For the production deploy a different npm task must be used:</p>
+<p><code>npm run doc</code></p>
+<p>The documentation will be accessible from the <em>/mapstore/docs/</em> path</p>
+<p>The generated folders can be removed with:</p>
+<p><code>npm run cleandoc</code></p>
+<h2 id="frontend-debugging">Frontend debugging</h2>
+<p>The development instance uses file watching and live reload, so each time a MapStore 2 file is changed, the browser will reload the updated application.</p>
+<p>Use your favourite editor / IDE to develop and debug on the browser as needed.</p>
+<p>We suggest to use one of the following:</p>
+<ul>
+<li><a href="https://atom.io/">Atom</a> with the following plugins:<ul>
+<li>editorconfig</li>
+<li>linter</li>
+<li>linter-eslint</li>
+<li>react</li>
+<li>lcovinfo</li>
+<li>minimap &amp; minimap-highlight-selected</li>
+<li>highlight-line &amp; highlight-selected</li>
+</ul>
+</li>
+<li><a href="http://www.sublimetext.com/">Sublime Text Editor</a> with the following plugins:<ul>
+<li>Babel</li>
+<li>Babel snippets</li>
+<li>Emmet</li>
+</ul>
+</li>
+</ul>
+<h3 id="redux-dev-tools">Redux Dev Tools</h3>
+<p>When you are running the application locally using <code>npm start</code> you can debug the application with <a href="https://github.com/gaearon/redux-devtools">redux dev tools</a> using the flag ?debug=true</p>
+<pre><code>http://localhost:8081/?debug=true#/?_k=c51bb5
+</code></pre><p>It also integrates with the <a href="https://github.com/zalmoxisus/redux-devtools-extension">browser's extension</a>, if installed.</p>
+<p>This way you can monitor the application's state evolution and the action triggered by your application.</p>
+<h2 id="backend-services-debugging">Backend services debugging</h2>
+<p>TBD</p>
+<h2 id="frontend-testing">Frontend testing</h2>
+<p>To run the MapStore 2 frontend test suite you can use:</p>
+<p><code>npm test</code></p>
+<p>You can also have a continuously running watching test runner, that will execute the complete suite each time a file is changed, launching:</p>
+<p><code>npm run continuoustest</code></p>
+<p>To run ESLint checks launch:</p>
+<p><code>npm run lint</code></p>
+<p>To run the same tests Travis will check (before a pull request):
+<code>npm run travis</code></p>
+<p>More information on frontend building tools and configuration is available <a href="frontend-building-tools-and-configuration">here</a></p>
+<h1 id="general-building-and-deploying">General building and deploying</h1>
+<hr />
+<p>Maven is the main tool for building and deploying a complete application. It takes care of:</p>
+<ul>
+<li>building the java libraries and webapp(s)</li>
+<li>calling NPM as needed to take care of the frontend builds</li>
+<li>launching both backend and frontend test suites</li>
+<li>creating the final war for deploy into a J2EE container (e.g. Tomcat)</li>
+</ul>
+<p>To create the final war, you have several options:</p>
+<ul>
+<li><p>full build, including submodules and frontend (e.g. GeoStore)</p>
+<p><code>./build.sh [version_identifier]</code></p>
+<p>Where version_identifier is an optional identifier of the generated war that will be shown in the settings panel of the application.</p>
+</li>
+<li><p>fast build (will use the last compiled version of submodules and compiled frontend)</p>
+</li>
+</ul>
+<p><code>mvn clean install</code> -Dmapstore2.version=[version_identifier]</p>
+<h3 id="changelog-generation">Changelog generation</h3>
+<p>To generate the changelog for a specific release you can use <a href="https://github.com/skywinder/github-changelog-generator">github_changelog_generator</a><br>The tool will overwrite the CHANGELOG.md file.</p>
+<p><strong>Install (Ubuntu)</strong></p>
+<pre><code>sudo apt-get install ruby-dev
+sudo gem install rake
+sudo gem install github_changelog_generator
+</code></pre><p><strong>Configure</strong></p>
+<ul>
+<li><a href="https://github.com/settings/tokens/new?description=GitHub%20Changelog%20Generator%20token">Generate a github token</a> and place it in your .bashrc this:<pre><code>export CHANGELOG_GITHUB_TOKEN="«your-40-digit-github-token»"
+</code></pre>as an alternative use --token</li>
+</ul>
+<ul>
+<li>cd to MapStore2</li>
+<li>edit <code>.github_changelog_generator</code> file :<ul>
+<li>set <code>since-tag</code> (the first tag you want to exclude)</li>
+<li>if you are creating the changelog before creating the tag set <code>future-release</code>=YYYY.NN.mm with the release tag</li>
+</ul>
+</li>
+</ul>
+<p>For example the <code>.github_changelog_generator</code> file for the changes between 2017.02.00 and 2017.03.00 release can look like the following:</p>
+<pre><code>future-release=2017.03.00
+since-tag=2017.01.00
+</code></pre><p><strong>Run</strong></p>
+<pre><code>github_changelog_generator
+</code></pre><h1 id="troubleshooting">Troubleshooting</h1>
+<hr />
+<h2 id="autowatch-doesn-t-work-on-linux-">Autowatch doesn't work on Linux.</h2>
+<p>You should need to increase <code>max_user_watches</code> variable for inotify.</p>
+<pre><code>echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf &amp;&amp; sudo sysctl -p
+</code></pre></body></html>
