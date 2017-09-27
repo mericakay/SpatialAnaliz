@@ -222,6 +222,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ucBilgiEkle.resx">
+      <DependentUpon>ucBilgiEkle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucHarita.resx">
       <DependentUpon>ucHarita.cs</DependentUpon>
     </EmbeddedResource>
@@ -268,6 +271,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="map\mapstore\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analiz_login_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analiz_login_bg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background_home.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

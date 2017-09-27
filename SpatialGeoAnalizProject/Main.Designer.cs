@@ -36,20 +36,20 @@
             // txtKadi
             // 
             this.txtKadi.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtKadi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtKadi.Location = new System.Drawing.Point(185, 189);
+            this.txtKadi.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtKadi.Location = new System.Drawing.Point(378, 256);
             this.txtKadi.Name = "txtKadi";
-            this.txtKadi.Size = new System.Drawing.Size(228, 24);
+            this.txtKadi.Size = new System.Drawing.Size(304, 34);
             this.txtKadi.TabIndex = 0;
             // 
             // txtSifre
             // 
             this.txtSifre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSifre.Location = new System.Drawing.Point(187, 273);
+            this.txtSifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSifre.Location = new System.Drawing.Point(378, 296);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.PasswordChar = '*';
-            this.txtSifre.Size = new System.Drawing.Size(225, 24);
+            this.txtSifre.Size = new System.Drawing.Size(301, 34);
             this.txtSifre.TabIndex = 1;
             this.txtSifre.Text = "Şifre";
             this.txtSifre.TextChanged += new System.EventHandler(this.txtSifre_TextChanged);
@@ -61,9 +61,9 @@
             this.btnGiris.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGiris.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.btnGiris.ForeColor = System.Drawing.Color.Transparent;
-            this.btnGiris.Location = new System.Drawing.Point(324, 326);
+            this.btnGiris.Location = new System.Drawing.Point(344, 392);
             this.btnGiris.Name = "btnGiris";
-            this.btnGiris.Size = new System.Drawing.Size(119, 59);
+            this.btnGiris.Size = new System.Drawing.Size(301, 33);
             this.btnGiris.TabIndex = 2;
             this.btnGiris.UseVisualStyleBackColor = false;
             this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
@@ -72,9 +72,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::SpatialGeoAnalizProject.Properties.Resources.login_form;
+            this.BackgroundImage = global::SpatialGeoAnalizProject.Properties.Resources.analiz_login_bg1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(501, 432);
+            this.ClientSize = new System.Drawing.Size(993, 663);
             this.Controls.Add(this.btnGiris);
             this.Controls.Add(this.txtSifre);
             this.Controls.Add(this.txtKadi);

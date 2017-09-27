@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MasterPage));
             this.tabMain = new System.Windows.Forms.TabControl();
+            this.ilImages = new System.Windows.Forms.ImageList(this.components);
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ilImages = new System.Windows.Forms.ImageList(this.components);
             this.accordion1 = new Opulos.Core.UI.Accordion();
             this.tabMain.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -49,8 +49,19 @@
             this.tabMain.Size = new System.Drawing.Size(833, 606);
             this.tabMain.TabIndex = 0;
             // 
+            // ilImages
+            // 
+            this.ilImages.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ilImages.ImageStream")));
+            this.ilImages.TransparentColor = System.Drawing.Color.Transparent;
+            this.ilImages.Images.SetKeyName(0, "data-512.png");
+            this.ilImages.Images.SetKeyName(1, "20151112_5643eb9384ea9.png");
+            this.ilImages.Images.SetKeyName(2, "maps-icon.png");
+            this.ilImages.Images.SetKeyName(3, "raporicon.png");
+            // 
             // tabPage2
             // 
+            this.tabPage2.BackgroundImage = global::SpatialGeoAnalizProject.Properties.Resources.background_home;
+            this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage2.Controls.Add(this.pictureBox1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -63,22 +74,13 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SpatialGeoAnalizProject.Properties.Resources.sinerjilogo_fw;
-            this.pictureBox1.Location = new System.Drawing.Point(14, 20);
+            this.pictureBox1.Location = new System.Drawing.Point(213, 155);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(386, 265);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // ilImages
-            // 
-            this.ilImages.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ilImages.ImageStream")));
-            this.ilImages.TransparentColor = System.Drawing.Color.Transparent;
-            this.ilImages.Images.SetKeyName(0, "data-512.png");
-            this.ilImages.Images.SetKeyName(1, "20151112_5643eb9384ea9.png");
-            this.ilImages.Images.SetKeyName(2, "maps-icon.png");
-            this.ilImages.Images.SetKeyName(3, "raporicon.png");
             // 
             // accordion1
             // 

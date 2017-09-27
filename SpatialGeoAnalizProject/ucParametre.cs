@@ -73,8 +73,10 @@ namespace SpatialGeoAnalizProject
         private void ucParametre_Load(object sender, EventArgs e)
         {
             cmb1doldur();
-            tablo.Columns.Add("Parametre", typeof(string));
-            tablo.Columns.Add("Parametre2", typeof(string));
+            tablo.Columns.Add("Analiz Türü", typeof(string));
+            tablo.Columns.Add("Analiz Tipi", typeof(string));
+            this.dgview.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+           // dgview.Width = Screen.PrimaryScreen.Bounds.Width;
 
         }
 
@@ -141,10 +143,12 @@ namespace SpatialGeoAnalizProject
                 chart1.ChartAreas[0].AxisX.LabelStyle.Angle = -70;
                 chart1.Visible = true;
                 chart1.Series["Olasılık"].Points.Add(Convert.ToInt32(reader[0].ToString()));
+
+               // chart1.ChartAreas[0].AxisX.Maximum = 13; chart1.ChartAreas[0].AxisX.Minimum = 0;
                 DialogResult dialogResult = MessageBox.Show("Yapılan Analiz Sonucunda olma olasılığı %" + reader[0].ToString() + "  'dir Devam Etmek ister misiniz ?", "Uyarı", MessageBoxButtons.YesNo);
                 if ( dialogResult ==  DialogResult.Yes)
                 {
-                    System.Diagnostics.Process.Start(@"http://192.168.1.47:8081/mapstore/#/viewer/leaflet/0");
+                    System.Diagnostics.Process.Start(@"http://localhost:8081/mapstore/#/viewer/leaflet/0");
                 }
             
 
