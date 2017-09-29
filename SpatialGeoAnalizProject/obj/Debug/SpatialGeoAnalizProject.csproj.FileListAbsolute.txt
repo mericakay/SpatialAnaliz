@@ -62,3 +62,4 @@ C:\Users\meric\Documents\Visual Studio 2015\Projects\SpatialAnaliz\SpatialGeoAna
 C:\Users\meric\Documents\Visual Studio 2015\Projects\SpatialAnaliz\SpatialGeoAnalizProject\obj\Debug\SpatialGeoAnalizProject.csproj.GenerateResource.Cache
 C:\Users\meric\Documents\Visual Studio 2015\Projects\SpatialAnaliz\SpatialGeoAnalizProject\obj\Debug\SpatialGeoAnalizProject.exe
 C:\Users\meric\Documents\Visual Studio 2015\Projects\SpatialAnaliz\SpatialGeoAnalizProject\obj\Debug\SpatialGeoAnalizProject.pdb
+C:\Users\meric\Documents\Visual Studio 2015\Projects\SpatialAnaliz\SpatialGeoAnalizProject\obj\Debug\SpatialGeoAnalizProject.csprojResolveAssemblyReference.cache

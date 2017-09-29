@@ -23,7 +23,7 @@ namespace SpatialGeoAnalizProject
         {
             String query = "SELECT a.id AS id, a.params  AS name,a.alacagi_param, a.verecegi_param, a.addsql FROM sys_params a WHERE a.active = 0 AND a.deleted = 0 ORDER BY a.priority";
             NpgsqlConnection dataconnect = new NpgsqlConnection(
-             "Server=192.168.1.47;Port=5432;User Id=postgres;Password=postgres;Database=dd");
+             "Server=78.187.120.6;Port=5432;User Id=postgres;Password=postgres;Database=dd");
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(query, dataconnect);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -37,7 +37,7 @@ namespace SpatialGeoAnalizProject
         //Seçilen Parametreleri buraya ekliyor
         public void grdDoldur()
         {
-            string connectionString = "Server=192.168.1.47;Port=5432;User Id=postgres;Password=postgres;Database=dd";
+            string connectionString = "Server=78.187.120.6;Port=5432;User Id=postgres;Password=postgres;Database=dd";
             string sql = "SELECT  a.addsql as sqlx FROM sys_params a WHERE a.active = 0 AND a.deleted = 0 and a.id =  " + cmbbir.SelectedValue + " ORDER BY a.priority ";
             NpgsqlConnection connection = new NpgsqlConnection(connectionString);
             NpgsqlDataAdapter dataadapter = new NpgsqlDataAdapter(sql, connection);
@@ -58,7 +58,7 @@ namespace SpatialGeoAnalizProject
 
             String query = label1.Text.ToString();
             NpgsqlConnection dataconnect = new NpgsqlConnection(
-             "Server=192.168.1.47;Port=5432;User Id=postgres;Password=postgres;Database=dd");
+             "Server=78.187.120.6;Port=5432;User Id=postgres;Password=postgres;Database=dd");
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(query, dataconnect);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -106,7 +106,7 @@ namespace SpatialGeoAnalizProject
         public void truncateTable()
         {
             NpgsqlConnection dataconnect = new NpgsqlConnection(
-          "Server=192.168.1.47;Port=5432;User Id=postgres;Password=postgres;Database=dd");
+          "Server=78.187.120.6;Port=5432;User Id=postgres;Password=postgres;Database=dd");
             string sqlTrunc = "TRUNCATE TABLE public.info_params ";
             NpgsqlCommand cmd = new NpgsqlCommand(sqlTrunc, dataconnect);
             dataconnect.Open();
@@ -119,7 +119,7 @@ namespace SpatialGeoAnalizProject
         public void spexecute()
         {
             NpgsqlConnection dataconnect = new NpgsqlConnection(
-             "Server=192.168.1.47;Port=5432;User Id=postgres;Password=postgres;Database=dd");
+             "Server=78.187.120.6;Port=5432;User Id=postgres;Password=postgres;Database=dd");
             NpgsqlCommand cmd = new NpgsqlCommand();
             NpgsqlDataReader reader;
             cmd.CommandText = "oki_temp_insert_gisdata()";
@@ -162,7 +162,7 @@ namespace SpatialGeoAnalizProject
         public void degerEkle()
         {
             NpgsqlConnection dataconnect = new NpgsqlConnection(
-           "Server=192.168.1.47;Port=5432;User Id=postgres;Password=postgres;Database=dd");
+           "Server=78.187.120.6;Port=5432;User Id=postgres;Password=postgres;Database=dd");
             truncateTable();
             for (int i = 0; i < dgview.Rows.Count; i++)
 

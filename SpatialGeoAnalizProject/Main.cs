@@ -21,7 +21,7 @@ namespace SpatialGeoAnalizProject
         private void btnGiris_Click(object sender, EventArgs e)
         {
             NpgsqlConnection dataconnect = new NpgsqlConnection(
-           "Server=192.168.1.47;Port=5432;User Id=postgres;Password=postgres;Database=dd;");
+           "Server=78.187.120.6;Port=5432;User Id=postgres;Password=postgres;Database=dd;");
 
 
             string query = "Select kullanic_adi from login where kullanic_adi = '"

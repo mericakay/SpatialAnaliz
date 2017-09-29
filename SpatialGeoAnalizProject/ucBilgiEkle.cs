@@ -21,7 +21,7 @@ namespace SpatialGeoAnalizProject
         {
             String query = "select s4.first_group , s4.description from  sys_specific_definitions s4 where s4.main_group = 46   and s4.active =0 and s4.deleted =0  ";
             NpgsqlConnection dataconnect = new NpgsqlConnection(
-             "Server=192.168.1.47;Port=5432;User Id=postgres;Password=postgres;Database=dd");
+             "Server=78.187.120.6;Port=5432;User Id=postgres;Password=postgres;Database=dd");
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(query, dataconnect);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -36,7 +36,7 @@ namespace SpatialGeoAnalizProject
         {
             String query = " select s1.first_group , s1.description from  sys_specific_definitions s1 where  s1.main_group = 43  and   s1.active =0 and s1.deleted =0 order by s1.first_group  ";
             NpgsqlConnection dataconnect = new NpgsqlConnection(
-             "Server=192.168.1.47;Port=5432;User Id=postgres;Password=postgres;Database=dd");
+             "Server=78.187.120.6;Port=5432;User Id=postgres;Password=postgres;Database=dd");
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(query, dataconnect);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -51,7 +51,7 @@ namespace SpatialGeoAnalizProject
         {
             String query = "select s3.first_group , s3.description from  sys_specific_definitions s3 where s3.main_group = 45   and s3.active =0 and s3.deleted =0 ";
             NpgsqlConnection dataconnect = new NpgsqlConnection(
-             "Server=192.168.1.47;Port=5432;User Id=postgres;Password=postgres;Database=dd");
+             "Server=78.187.120.6;Port=5432;User Id=postgres;Password=postgres;Database=dd");
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(query, dataconnect);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -66,7 +66,7 @@ namespace SpatialGeoAnalizProject
         {
             String query = "select s2.first_group , s2.description from  sys_specific_definitions s2 where s2.main_group = 44   and s2.active =0 and s2.deleted =0   ";
             NpgsqlConnection dataconnect = new NpgsqlConnection(
-             "Server=192.168.1.47;Port=5432;User Id=postgres;Password=postgres;Database=dd");
+             "Server=78.187.120.6;Port=5432;User Id=postgres;Password=postgres;Database=dd");
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(query, dataconnect);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -81,7 +81,7 @@ namespace SpatialGeoAnalizProject
         {
             String query = "SELECT first_group,  description  FROM sys_specific_definitions where main_group = 42 order by first_group";
             NpgsqlConnection dataconnect = new NpgsqlConnection(
-             "Server=192.168.1.47;Port=5432;User Id=postgres;Password=postgres;Database=dd");
+             "Server=78.187.120.6;Port=5432;User Id=postgres;Password=postgres;Database=dd");
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(query, dataconnect);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -96,7 +96,7 @@ namespace SpatialGeoAnalizProject
         {
             String query = "SELECT  a.city_id AS id, a.name  AS name,  a.name_eng as description,   CASE (SELECT COUNT(z.id) FROM sys_borough z WHERE z.country_id = a.country_id)  WHEN 0 THEN false  ELSE true END AS kontrol   FROM sys_city a  WHERE a.active = 0 AND a.deleted = 0 and   a.language_id = 647 AND  a.country_id = 91 ORDER BY a.priority ASC, name ";
             NpgsqlConnection dataconnect = new NpgsqlConnection(
-             "Server=192.168.1.47;Port=5432;User Id=postgres;Password=postgres;Database=dd");
+             "Server=78.187.120.6;Port=5432;User Id=postgres;Password=postgres;Database=dd");
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(query, dataconnect);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -111,7 +111,7 @@ namespace SpatialGeoAnalizProject
         {
             String query = "SELECT boroughs_id as id,   name, name_eng as description   , false AS kontrol  FROM public.sys_borough   where city_id = "+cmbil.SelectedValue+"   order by name";
             NpgsqlConnection dataconnect = new NpgsqlConnection(
-             "Server=192.168.1.47;Port=5432;User Id=postgres;Password=postgres;Database=dd");
+             "Server=78.187.120.6;Port=5432;User Id=postgres;Password=postgres;Database=dd");
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(query, dataconnect);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -125,7 +125,7 @@ namespace SpatialGeoAnalizProject
            public void spexecute()
         {
             NpgsqlConnection dataconnect = new NpgsqlConnection(
-             "Server=192.168.1.47;Port=5432;User Id=postgres;Password=postgres;Database=dd");
+             "Server=78.187.120.6;Port=5432;User Id=postgres;Password=postgres;Database=dd");
             NpgsqlCommand cmd = new NpgsqlCommand();
             NpgsqlDataReader reader;
             cmd.CommandText = "oki_temp_insert_gis_istihbarat()";
@@ -152,7 +152,7 @@ namespace SpatialGeoAnalizProject
         {
             String query = "SELECT id, name, kisaltma as description , false as kontrol FROM  sys_orgutler where active =0 and deleted =0  order by priority , name  ";
             NpgsqlConnection dataconnect = new NpgsqlConnection(
-             "Server=192.168.1.47;Port=5432;User Id=postgres;Password=postgres;Database=dd");
+             "Server=78.187.120.6;Port=5432;User Id=postgres;Password=postgres;Database=dd");
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(query, dataconnect);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -196,7 +196,7 @@ namespace SpatialGeoAnalizProject
             var dateAndTime = DateTime.Now;
             var date = dateAndTime.Date;
             NpgsqlConnection dataconnect = new NpgsqlConnection(
-           "Server=192.168.1.47;Port=5432;User Id=postgres;Password=postgres;Database=dd");
+           "Server=78.187.120.6;Port=5432;User Id=postgres;Password=postgres;Database=dd");
             NpgsqlCommand cmd = new NpgsqlCommand();
             dataconnect.Open();
             cmd.Connection = dataconnect;
