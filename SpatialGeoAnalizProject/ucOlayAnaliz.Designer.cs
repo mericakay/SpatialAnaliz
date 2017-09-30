@@ -46,6 +46,9 @@
             this.Yıl = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.date1 = new System.Windows.Forms.DateTimePicker();
+            this.date2 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // cmbHedefGrubu
@@ -161,7 +164,7 @@
             // 
             // btnAnaliz
             // 
-            this.btnAnaliz.Location = new System.Drawing.Point(263, 301);
+            this.btnAnaliz.Location = new System.Drawing.Point(248, 360);
             this.btnAnaliz.Name = "btnAnaliz";
             this.btnAnaliz.Size = new System.Drawing.Size(124, 74);
             this.btnAnaliz.TabIndex = 2;
@@ -202,12 +205,38 @@
             this.comboBox1.Size = new System.Drawing.Size(200, 21);
             this.comboBox1.TabIndex = 7;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(18, 312);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Tarih Aralığı ";
+            // 
+            // date1
+            // 
+            this.date1.Location = new System.Drawing.Point(120, 312);
+            this.date1.Name = "date1";
+            this.date1.Size = new System.Drawing.Size(156, 20);
+            this.date1.TabIndex = 9;
+            // 
+            // date2
+            // 
+            this.date2.Location = new System.Drawing.Point(288, 312);
+            this.date2.Name = "date2";
+            this.date2.Size = new System.Drawing.Size(155, 20);
+            this.date2.TabIndex = 10;
+            // 
             // ucOlayAnaliz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SpatialGeoAnalizProject.Properties.Resources.background_home;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.date2);
+            this.Controls.Add(this.date1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.Yıl);
@@ -254,5 +283,8 @@
         private System.Windows.Forms.Label Yıl;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker date1;
+        private System.Windows.Forms.DateTimePicker date2;
     }
 }

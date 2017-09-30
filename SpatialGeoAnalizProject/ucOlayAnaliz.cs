@@ -179,6 +179,7 @@ namespace SpatialGeoAnalizProject
             string deger7 = cmbSilahliSilahsiz.SelectedValue.ToString();
             string deger8 = textBox1.Text.ToString();
             string deger9 = comboBox1.Text.ToString();
+          
             if (deger8 == "")
             {
                 deger8 = "";
@@ -198,7 +199,7 @@ namespace SpatialGeoAnalizProject
             }
 
            
-            cmd.CommandText = "insert into public.info_params_olay (combobox1_id, combobox2_id , combobox3_id , combobox4_id , combobox5_id , combobox6_id , combobox7_id, yil, ay ) values ( @combobox1_id, @combobox2_id , @combobox3_id , @combobox4_id , @combobox5_id , @combobox6_id , @combobox7_id , @yil, @ay) ";
+            cmd.CommandText = "insert into public.info_params_olay (combobox1_id, combobox2_id , combobox3_id , combobox4_id , combobox5_id , combobox6_id , combobox7_id, yil, ay, tarih1, tarih2 ) values ( @combobox1_id, @combobox2_id , @combobox3_id , @combobox4_id , @combobox5_id , @combobox6_id , @combobox7_id , @yil, @ay, @tarih1, @tarih2) ";
             cmd.Parameters.AddWithValue("@combobox1_id", cmbHedefGrubu.SelectedValue.ToString());
             cmd.Parameters.AddWithValue("@combobox2_id", cmbHedefTipi.SelectedValue.ToString());
             cmd.Parameters.AddWithValue("@combobox3_id", deger3);
@@ -208,6 +209,8 @@ namespace SpatialGeoAnalizProject
             cmd.Parameters.AddWithValue("@combobox7_id", cmbSilahliSilahsiz.SelectedValue.ToString());
             cmd.Parameters.AddWithValue("@yil", yil);
             cmd.Parameters.AddWithValue("@ay", ay);
+            cmd.Parameters.AddWithValue("@tarih1", date1.Value.Date);
+            cmd.Parameters.AddWithValue("@tarih2", date2.Value.Date);
             cmd.ExecuteNonQuery();
             dataconnect.Close();
 
