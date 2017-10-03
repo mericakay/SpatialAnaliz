@@ -40,7 +40,7 @@ namespace SpatialGeoAnalizProject
 
         private void ucSiyasiPartiEkle_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

@@ -35,7 +35,7 @@
             // 
             // txtAdi
             // 
-            this.txtAdi.Location = new System.Drawing.Point(69, 45);
+            this.txtAdi.Location = new System.Drawing.Point(61, 89);
             this.txtAdi.Name = "txtAdi";
             this.txtAdi.Size = new System.Drawing.Size(160, 20);
             this.txtAdi.TabIndex = 0;
@@ -43,7 +43,7 @@
             // 
             // txtKisaltma
             // 
-            this.txtKisaltma.Location = new System.Drawing.Point(69, 92);
+            this.txtKisaltma.Location = new System.Drawing.Point(61, 136);
             this.txtKisaltma.Name = "txtKisaltma";
             this.txtKisaltma.Size = new System.Drawing.Size(160, 20);
             this.txtKisaltma.TabIndex = 1;
@@ -51,7 +51,7 @@
             // 
             // btnEkle
             // 
-            this.btnEkle.Location = new System.Drawing.Point(153, 136);
+            this.btnEkle.Location = new System.Drawing.Point(145, 180);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(76, 56);
             this.btnEkle.TabIndex = 2;
@@ -63,11 +63,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::SpatialGeoAnalizProject.Properties.Resources.background_home;
             this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.txtKisaltma);
             this.Controls.Add(this.txtAdi);
             this.Name = "ucSiyasiPartiEkle";
-            this.Size = new System.Drawing.Size(285, 254);
+            this.Size = new System.Drawing.Size(582, 427);
             this.Load += new System.EventHandler(this.ucSiyasiPartiEkle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -7,7 +7,7 @@ using Npgsql;
 
 namespace SpatialGeoAnalizProject
 {
-     class publicConnectionString
+    class publicConnectionString
     {
         string connectionString = "Server=192.168.1.47;Port=5432;User Id=postgres;Password=postgres;Database=dd";
         public string connstring
@@ -15,7 +15,5 @@ namespace SpatialGeoAnalizProject
             get { return connectionString; }
             set { connectionString = value; }
         }
-       
-     
     }
 }

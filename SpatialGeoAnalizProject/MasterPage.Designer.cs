@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MasterPage));
             this.tabMain = new System.Windows.Forms.TabControl();
-            this.ilImages = new System.Windows.Forms.ImageList(this.components);
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ilImages = new System.Windows.Forms.ImageList(this.components);
             this.accordion1 = new Opulos.Core.UI.Accordion();
             this.tabMain.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -48,15 +48,6 @@
             this.tabMain.SelectedIndex = 0;
             this.tabMain.Size = new System.Drawing.Size(833, 606);
             this.tabMain.TabIndex = 0;
-            // 
-            // ilImages
-            // 
-            this.ilImages.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ilImages.ImageStream")));
-            this.ilImages.TransparentColor = System.Drawing.Color.Transparent;
-            this.ilImages.Images.SetKeyName(0, "data-512.png");
-            this.ilImages.Images.SetKeyName(1, "20151112_5643eb9384ea9.png");
-            this.ilImages.Images.SetKeyName(2, "maps-icon.png");
-            this.ilImages.Images.SetKeyName(3, "raporicon.png");
             // 
             // tabPage2
             // 
@@ -81,6 +72,16 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // ilImages
+            // 
+            this.ilImages.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ilImages.ImageStream")));
+            this.ilImages.TransparentColor = System.Drawing.Color.Transparent;
+            this.ilImages.Images.SetKeyName(0, "data-512.png");
+            this.ilImages.Images.SetKeyName(1, "20151112_5643eb9384ea9.png");
+            this.ilImages.Images.SetKeyName(2, "maps-icon.png");
+            this.ilImages.Images.SetKeyName(3, "raporicon.png");
+            this.ilImages.Images.SetKeyName(4, "social.png");
             // 
             // accordion1
             // 
@@ -143,6 +144,7 @@
             this.accordion1.Size = new System.Drawing.Size(191, 617);
             this.accordion1.TabIndex = 1;
             this.accordion1.UpArrow = null;
+            this.accordion1.Load += new System.EventHandler(this.accordion1_Load);
             // 
             // MasterPage
             // 

@@ -91,7 +91,7 @@ namespace SpatialGeoAnalizProject
 
 
             };
-            Button btnOrgutElemani = new Button { Text = "      Örgüt Elemanı Ekle", AutoSize = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 0, BackColor = Color.FromArgb(246, 246, 246) };
+            Button btnOrgutElemani = new Button { Text = "      Örgüt Elemanı Ekle", AutoSize = false, Enabled = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 0, BackColor = Color.FromArgb(246, 246, 246) };
             btnOrgutElemani.Click += delegate (object sender, EventArgs e)
             {
                 tabMain.TabPages.Clear();
@@ -103,7 +103,7 @@ namespace SpatialGeoAnalizProject
 
 
             };
-            Button btnSecim = new Button { Text = "      Seçim Ekle", AutoSize = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 0, BackColor = Color.FromArgb(246, 246, 246) };
+            Button btnSecim = new Button { Text = "      Seçim Ekle", AutoSize = false, Enabled = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 0, BackColor = Color.FromArgb(246, 246, 246) };
             btnSecim.Click += delegate (object sender, EventArgs e)
             {
                 tabMain.TabPages.Clear();
@@ -127,7 +127,7 @@ namespace SpatialGeoAnalizProject
 
 
             };
-            Button btnNufusBilgisi = new Button { Text = "      Nüfus Bilgisi Ekle", AutoSize = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 0, BackColor = Color.FromArgb(246, 246, 246) };
+            Button btnNufusBilgisi = new Button { Text = "      Nüfus Bilgisi Ekle", AutoSize = false, Enabled = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 0, BackColor = Color.FromArgb(246, 246, 246) };
             btnNufusBilgisi.Click += delegate (object sender, EventArgs e)
             {
                 tabMain.TabPages.Clear();
@@ -139,7 +139,7 @@ namespace SpatialGeoAnalizProject
 
 
             };
-            Button btnMutluluk = new Button { Text = "      Mutluluk Oranı Ekle", AutoSize = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 0, BackColor = Color.FromArgb(246, 246, 246) };
+            Button btnMutluluk = new Button { Text = "      Mutluluk Oranı Ekle", AutoSize = false, Enabled = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 0, BackColor = Color.FromArgb(246, 246, 246) };
             btnMutluluk.Click += delegate (object sender, EventArgs e)
             {
                 tabMain.TabPages.Clear();
@@ -150,7 +150,7 @@ namespace SpatialGeoAnalizProject
                 tabMain.TabPages.Add(page);
             };
 
-            Button btnMuhimmat = new Button { Text = "      Mühimmat Bilgisi Ekle", AutoSize = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 0, BackColor = Color.FromArgb(246, 246, 246) };
+            Button btnMuhimmat = new Button { Text = "      Mühimmat Bilgisi Ekle", AutoSize = false, Enabled = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 0, BackColor = Color.FromArgb(246, 246, 246) };
             btnMuhimmat.Click += delegate (object sender, EventArgs e)
             {
                 tabMain.TabPages.Clear();
@@ -161,7 +161,7 @@ namespace SpatialGeoAnalizProject
                 tabMain.TabPages.Add(page);
             };
 
-            Button btnKorucu = new Button { Text = "      Korucu Ekle", AutoSize = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 0, BackColor = Color.FromArgb(246, 246, 246) };
+            Button btnKorucu = new Button { Text = "      Korucu Ekle", AutoSize = false, Enabled = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 0, BackColor = Color.FromArgb(246, 246, 246) };
             btnKorucu.Click += delegate (object sender, EventArgs e)
             {
                 tabMain.TabPages.Clear();
@@ -174,7 +174,7 @@ namespace SpatialGeoAnalizProject
 
             };
 
-            Button btnIssizlik = new Button { Text = "      İşsizlik Ekle", AutoSize = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 0, BackColor = Color.FromArgb(246, 246, 246) };
+            Button btnIssizlik = new Button { Text = "      İşsizlik Ekle", AutoSize = false, Enabled = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 0, BackColor = Color.FromArgb(246, 246, 246) };
             btnIssizlik.Click += delegate (object sender, EventArgs e)
             {
                 tabMain.TabPages.Clear();
@@ -186,7 +186,7 @@ namespace SpatialGeoAnalizProject
 
 
             };
-            Button btnHedefGrubu = new Button { Text = "      Hedef Grubu Ekle", AutoSize = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 0, BackColor = Color.FromArgb(246, 246, 246) };
+            Button btnHedefGrubu = new Button { Text = "      Hedef Grubu Ekle", AutoSize = false, Enabled = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 0, BackColor = Color.FromArgb(246, 246, 246) };
             btnHedefGrubu.Click += delegate (object sender, EventArgs e)
             {
                 tabMain.TabPages.Clear();
@@ -198,7 +198,7 @@ namespace SpatialGeoAnalizProject
 
 
             };
-            Button btnHedef = new Button { Text = "      Hedef Ekle", AutoSize = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 0, BackColor = Color.FromArgb(246, 246, 246) };
+            Button btnHedef = new Button { Text = "      Hedef Ekle", AutoSize = false, Enabled = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 0, BackColor = Color.FromArgb(246, 246, 246) };
             btnHedef.Click += delegate (object sender, EventArgs e)
             {
                 tabMain.TabPages.Clear();
@@ -210,7 +210,7 @@ namespace SpatialGeoAnalizProject
 
 
             };
-            Button btnGocHizi = new Button { Text = "      Göç Hızı Ekle", AutoSize = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 0, BackColor = Color.FromArgb(246, 246, 246) };
+            Button btnGocHizi = new Button { Text = "      Göç Hızı Ekle", AutoSize = false, Enabled = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 0, BackColor = Color.FromArgb(246, 246, 246) };
             btnGocHizi.Click += delegate (object sender, EventArgs e)
             {
                 tabMain.TabPages.Clear();
@@ -292,10 +292,16 @@ namespace SpatialGeoAnalizProject
             checkboxList.Add(accordion1.Add(rapor, "Raporlar"));
             //Raporlar Bitti
             //Advanced Analysis Başlangıç
-            Button btnSonar = new Button { Text = "      Social Media Analysis", AutoSize = false, Enabled = true, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 3, BackColor = Color.FromArgb(246, 246, 246) };
+            Button btnSonar = new Button { Text = "      Social Media Analysis", AutoSize = false, Enabled = true, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 4, BackColor = Color.FromArgb(246, 246, 246) };
             btnSonar.Click += delegate (object sender, EventArgs e)
             {
-                System.Diagnostics.Process.Start(@"http://sonar.twinsanalytics.com");
+                tabMain.TabPages.Clear();
+                TabPage page = new TabPage(" Social Media Analysis");
+                sosialSonar control = new sosialSonar();
+                control.Dock = DockStyle.Fill;
+                page.Controls.Add(control);
+                tabMain.TabPages.Add(page);
+
             };
             Button btnAdvanced = new Button { Text = "      Advanced Analysis", AutoSize = false, Enabled = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 3, BackColor = Color.FromArgb(246, 246, 246) };
             btnAdvanced.Click += delegate (object sender, EventArgs e)
@@ -317,6 +323,11 @@ namespace SpatialGeoAnalizProject
         }
 
         private void MasterPage_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void accordion1_Load(object sender, EventArgs e)
         {
 
         }

@@ -38,7 +38,7 @@
             // 
             this.btnEkle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
-            this.btnEkle.Location = new System.Drawing.Point(95, 123);
+            this.btnEkle.Location = new System.Drawing.Point(158, 163);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(104, 54);
             this.btnEkle.TabIndex = 3;
@@ -49,7 +49,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(28, 47);
+            this.comboBox1.Location = new System.Drawing.Point(91, 87);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(173, 21);
             this.comboBox1.TabIndex = 0;
@@ -57,7 +57,7 @@
             // 
             // txtkisaltma
             // 
-            this.txtkisaltma.Location = new System.Drawing.Point(28, 98);
+            this.txtkisaltma.Location = new System.Drawing.Point(91, 138);
             this.txtkisaltma.Name = "txtkisaltma";
             this.txtkisaltma.Size = new System.Drawing.Size(173, 20);
             this.txtkisaltma.TabIndex = 2;
@@ -65,7 +65,7 @@
             // 
             // txtadi
             // 
-            this.txtadi.Location = new System.Drawing.Point(28, 74);
+            this.txtadi.Location = new System.Drawing.Point(91, 114);
             this.txtadi.Name = "txtadi";
             this.txtadi.Size = new System.Drawing.Size(173, 20);
             this.txtadi.TabIndex = 1;
@@ -75,13 +75,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::SpatialGeoAnalizProject.Properties.Resources.background_home;
             this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.txtkisaltma);
             this.Controls.Add(this.txtadi);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ucOrgutEkle";
-            this.Size = new System.Drawing.Size(344, 219);
+            this.Size = new System.Drawing.Size(522, 447);
             this.Load += new System.EventHandler(this.ucOrgutEkle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
