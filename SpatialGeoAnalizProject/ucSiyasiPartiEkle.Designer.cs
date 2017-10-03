@@ -68,6 +68,7 @@
             this.Controls.Add(this.txtAdi);
             this.Name = "ucSiyasiPartiEkle";
             this.Size = new System.Drawing.Size(285, 254);
+            this.Load += new System.EventHandler(this.ucSiyasiPartiEkle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

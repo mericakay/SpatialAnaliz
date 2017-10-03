@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Npgsql;
 
+
 namespace SpatialGeoAnalizProject
 {
     public partial class ucOrgutEkle : UserControl
@@ -17,11 +18,11 @@ namespace SpatialGeoAnalizProject
         {
             InitializeComponent();
         }
+        publicConnectionString connectionstring = new publicConnectionString();
         public void dereceDoldur()
         {
             String query = "SELECT first_group,  description  FROM sys_specific_definitions where main_group = 42 order by first_group";
-            NpgsqlConnection dataconnect = new NpgsqlConnection(
-             "Server=78.187.120.6;Port=5432;User Id=postgres;Password=postgres;Database=dd");
+            NpgsqlConnection dataconnect = new NpgsqlConnection(connectionstring.connstring.ToString());
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(query, dataconnect);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -36,8 +37,7 @@ namespace SpatialGeoAnalizProject
             string orgutAdi = txtadi.Text.ToString();
             string kisaltma = txtkisaltma.Text.ToString();
             //int derece = comboBox1.SelectedValue.ToString();
-            NpgsqlConnection dataconnect = new NpgsqlConnection(
-           "Server=192.168.1.47;Port=5432;User Id=postgres;Password=postgres;Database=dd");
+            NpgsqlConnection dataconnect = new NpgsqlConnection(connectionstring.connstring.ToString());
             NpgsqlCommand cmd = new NpgsqlCommand();
             dataconnect.Open();
             cmd.Connection = dataconnect;

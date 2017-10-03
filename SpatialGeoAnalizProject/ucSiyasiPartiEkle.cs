@@ -17,14 +17,13 @@ namespace SpatialGeoAnalizProject
         {
             InitializeComponent();
         }
-
+        publicConnectionString connectionstring = new publicConnectionString();
         private void btnEkle_Click(object sender, EventArgs e)
         {
             string partiAdi = txtAdi.Text.ToString();
             string kisaltma = txtKisaltma.Text.ToString();
             //int derece = comboBox1.SelectedValue.ToString();
-            NpgsqlConnection dataconnect = new NpgsqlConnection(
-           "Server=192.168.1.47;Port=5432;User Id=postgres;Password=postgres;Database=dd");
+            NpgsqlConnection dataconnect = new NpgsqlConnection(connectionstring.connstring.ToString());
             NpgsqlCommand cmd = new NpgsqlCommand();
             dataconnect.Open();
             cmd.Connection = dataconnect;
@@ -37,6 +36,11 @@ namespace SpatialGeoAnalizProject
             cmd.ExecuteNonQuery();
             dataconnect.Close();
             MessageBox.Show("Kayıt işlemi başarılı");
+        }
+
+        private void ucSiyasiPartiEkle_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

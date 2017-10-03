@@ -292,10 +292,10 @@ namespace SpatialGeoAnalizProject
             checkboxList.Add(accordion1.Add(rapor, "Raporlar"));
             //Raporlar Bitti
             //Advanced Analysis Başlangıç
-            Button btnSonar = new Button { Text = "      Social Media Analysis", AutoSize = false, Enabled = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 3, BackColor = Color.FromArgb(246, 246, 246) };
+            Button btnSonar = new Button { Text = "      Social Media Analysis", AutoSize = false, Enabled = true, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 3, BackColor = Color.FromArgb(246, 246, 246) };
             btnSonar.Click += delegate (object sender, EventArgs e)
             {
-                System.Diagnostics.Process.Start(@"C:\raportest\ssss.pdf");
+                System.Diagnostics.Process.Start(@"http://sonar.twinsanalytics.com");
             };
             Button btnAdvanced = new Button { Text = "      Advanced Analysis", AutoSize = false, Enabled = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 3, BackColor = Color.FromArgb(246, 246, 246) };
             btnAdvanced.Click += delegate (object sender, EventArgs e)

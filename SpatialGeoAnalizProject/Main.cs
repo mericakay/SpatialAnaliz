@@ -17,11 +17,10 @@ namespace SpatialGeoAnalizProject
         {
             InitializeComponent();
         }
-
+        publicConnectionString connectionstring = new publicConnectionString();
         private void btnGiris_Click(object sender, EventArgs e)
         {
-            NpgsqlConnection dataconnect = new NpgsqlConnection(
-           "Server=78.187.120.6;Port=5432;User Id=postgres;Password=postgres;Database=dd;");
+            NpgsqlConnection dataconnect = new NpgsqlConnection(connectionstring.connstring.ToString());
 
 
             string query = "Select kullanic_adi from login where kullanic_adi = '"
