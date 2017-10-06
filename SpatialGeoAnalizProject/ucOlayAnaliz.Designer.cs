@@ -178,6 +178,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(200, 20);
             this.textBox1.TabIndex = 3;
+            this.textBox1.Visible = false;
             // 
             // Yıl
             // 
@@ -187,6 +188,7 @@
             this.Yıl.Size = new System.Drawing.Size(18, 13);
             this.Yıl.TabIndex = 5;
             this.Yıl.Text = "Yıl";
+            this.Yıl.Visible = false;
             // 
             // label10
             // 
@@ -196,6 +198,7 @@
             this.label10.Size = new System.Drawing.Size(19, 13);
             this.label10.TabIndex = 6;
             this.label10.Text = "Ay";
+            this.label10.Visible = false;
             // 
             // comboBox1
             // 
@@ -204,6 +207,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(200, 21);
             this.comboBox1.TabIndex = 7;
+            this.comboBox1.Visible = false;
             // 
             // label3
             // 

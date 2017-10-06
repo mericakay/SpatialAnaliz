@@ -79,12 +79,24 @@ namespace SpatialGeoAnalizProject
 
 
             };
-            Button btnOlay = new Button { Text = "      Olay Ekle", AutoSize = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 0, BackColor = Color.FromArgb(246, 246, 246) };
+            Button btnOlay = new Button { Text = "      Olay Tanımı Ekle", AutoSize = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 0, BackColor = Color.FromArgb(246, 246, 246) };
             btnOlay.Click += delegate (object sender, EventArgs e)
             {
                 tabMain.TabPages.Clear();
-                TabPage page = new TabPage("Olay Ekle");
+                TabPage page = new TabPage("Olay Tanımı Ekle");
                 ucOlayEkle control = new ucOlayEkle();
+                control.Dock = DockStyle.Fill;
+                page.Controls.Add(control);
+                tabMain.TabPages.Add(page);
+
+
+            };
+            Button btnGerceklesmisOlay = new Button { Text = "      Olay  Ekle", AutoSize = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 0, BackColor = Color.FromArgb(246, 246, 246) };
+            btnGerceklesmisOlay.Click += delegate (object sender, EventArgs e)
+            {
+                tabMain.TabPages.Clear();
+                TabPage page = new TabPage("Olay Ekle");
+                ucGerceklesmisOlay control = new ucGerceklesmisOlay();
                 control.Dock = DockStyle.Fill;
                 page.Controls.Add(control);
                 tabMain.TabPages.Add(page);
@@ -251,7 +263,8 @@ namespace SpatialGeoAnalizProject
                    btnHedefGrubu,
                    btnHedef,
                    btnGocHizi,
-                   btnBilgi
+                   btnBilgi,
+                   btnGerceklesmisOlay
 
                    }
             };
