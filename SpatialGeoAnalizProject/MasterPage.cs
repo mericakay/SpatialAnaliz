@@ -103,101 +103,8 @@ namespace SpatialGeoAnalizProject
 
 
             };
-            Button btnOrgutElemani = new Button { Text = "      Örgüt Elemanı Ekle", AutoSize = false, Enabled = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 0, BackColor = Color.FromArgb(246, 246, 246) };
-            btnOrgutElemani.Click += delegate (object sender, EventArgs e)
-            {
-                tabMain.TabPages.Clear();
-                TabPage page = new TabPage("Örgüt Elemanı Ekle");
-                ucOrgutElemaniEkle control = new ucOrgutElemaniEkle();
-                control.Dock = DockStyle.Fill;
-                page.Controls.Add(control);
-                tabMain.TabPages.Add(page);
 
-
-            };
-            Button btnSecim = new Button { Text = "      Seçim Ekle", AutoSize = false, Enabled = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 0, BackColor = Color.FromArgb(246, 246, 246) };
-            btnSecim.Click += delegate (object sender, EventArgs e)
-            {
-                tabMain.TabPages.Clear();
-                TabPage page = new TabPage("Seçim Ekle");
-                ucSecimEkle control = new ucSecimEkle();
-                control.Dock = DockStyle.Fill;
-                page.Controls.Add(control);
-                tabMain.TabPages.Add(page);
-
-
-            };
-            Button btnSiyasiparti = new Button { Text = "      Siyasi Parti Ekle", AutoSize = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 0, BackColor = Color.FromArgb(246, 246, 246) };
-            btnSiyasiparti.Click += delegate (object sender, EventArgs e)
-            {
-                tabMain.TabPages.Clear();
-                TabPage page = new TabPage("Siyasi Parti Ekle");
-                ucSiyasiPartiEkle control = new ucSiyasiPartiEkle();
-                control.Dock = DockStyle.Fill;
-                page.Controls.Add(control);
-                tabMain.TabPages.Add(page);
-
-
-            };
-            Button btnNufusBilgisi = new Button { Text = "      Nüfus Bilgisi Ekle", AutoSize = false, Enabled = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 0, BackColor = Color.FromArgb(246, 246, 246) };
-            btnNufusBilgisi.Click += delegate (object sender, EventArgs e)
-            {
-                tabMain.TabPages.Clear();
-                TabPage page = new TabPage("Nüfus Bilgisi Ekle");
-                ucNufusBilgisiEkle control = new ucNufusBilgisiEkle();
-                control.Dock = DockStyle.Fill;
-                page.Controls.Add(control);
-                tabMain.TabPages.Add(page);
-
-
-            };
-            Button btnMutluluk = new Button { Text = "      Mutluluk Oranı Ekle", AutoSize = false, Enabled = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 0, BackColor = Color.FromArgb(246, 246, 246) };
-            btnMutluluk.Click += delegate (object sender, EventArgs e)
-            {
-                tabMain.TabPages.Clear();
-                TabPage page = new TabPage("Mutluluk Oranı Ekle");
-                ucMutlulukEkle control = new ucMutlulukEkle();
-                control.Dock = DockStyle.Fill;
-                page.Controls.Add(control);
-                tabMain.TabPages.Add(page);
-            };
-
-            Button btnMuhimmat = new Button { Text = "      Mühimmat Bilgisi Ekle", AutoSize = false, Enabled = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 0, BackColor = Color.FromArgb(246, 246, 246) };
-            btnMuhimmat.Click += delegate (object sender, EventArgs e)
-            {
-                tabMain.TabPages.Clear();
-                TabPage page = new TabPage("Muhimmat Bilgisi Ekle");
-                ucMuhimmatEkle control = new ucMuhimmatEkle();
-                control.Dock = DockStyle.Fill;
-                page.Controls.Add(control);
-                tabMain.TabPages.Add(page);
-            };
-
-            Button btnKorucu = new Button { Text = "      Korucu Ekle", AutoSize = false, Enabled = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 0, BackColor = Color.FromArgb(246, 246, 246) };
-            btnKorucu.Click += delegate (object sender, EventArgs e)
-            {
-                tabMain.TabPages.Clear();
-                TabPage page = new TabPage("Korucu Ekle");
-                ucKorucuEkle control = new ucKorucuEkle();
-                control.Dock = DockStyle.Fill;
-                page.Controls.Add(control);
-                tabMain.TabPages.Add(page);
-
-
-            };
-
-            Button btnIssizlik = new Button { Text = "      İşsizlik Ekle", AutoSize = false, Enabled = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 0, BackColor = Color.FromArgb(246, 246, 246) };
-            btnIssizlik.Click += delegate (object sender, EventArgs e)
-            {
-                tabMain.TabPages.Clear();
-                TabPage page = new TabPage("İşsizlik Ekle");
-                ucIssizlikEkle control = new ucIssizlikEkle();
-                control.Dock = DockStyle.Fill;
-                page.Controls.Add(control);
-                tabMain.TabPages.Add(page);
-
-
-            };
+       
             Button btnHedefGrubu = new Button { Text = "      Hedef Grubu Ekle", AutoSize = false, Enabled = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 0, BackColor = Color.FromArgb(246, 246, 246) };
             btnHedefGrubu.Click += delegate (object sender, EventArgs e)
             {
@@ -222,18 +129,7 @@ namespace SpatialGeoAnalizProject
 
 
             };
-            Button btnGocHizi = new Button { Text = "      Göç Hızı Ekle", AutoSize = false, Enabled = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 0, BackColor = Color.FromArgb(246, 246, 246) };
-            btnGocHizi.Click += delegate (object sender, EventArgs e)
-            {
-                tabMain.TabPages.Clear();
-                TabPage page = new TabPage("Göç Hızı Ekle");
-                ucGocHiziEkle control = new ucGocHiziEkle();
-                control.Dock = DockStyle.Fill;
-                page.Controls.Add(control);
-                tabMain.TabPages.Add(page);
-
-
-            };
+         
             Button btnBilgi = new Button { Text = "      Bilgi Ekle", AutoSize = false, TextImageRelation = TextImageRelation.ImageBeforeText, ImageAlign = ContentAlignment.MiddleLeft, TextAlign = ContentAlignment.MiddleRight, BackgroundImageLayout = ImageLayout.Center, Size = new Size(50, 27), Dock = DockStyle.Top, ImageList = ilImages, ImageIndex = 0, BackColor = Color.FromArgb(246, 246, 246) };
             btnBilgi.Click += delegate (object sender, EventArgs e)
             {
@@ -252,17 +148,10 @@ namespace SpatialGeoAnalizProject
                 Controls = {
                    btnOrgut,
                    btnOlay,
-                   btnOrgutElemani,
-                   btnSecim,
-                   btnSiyasiparti,
-                   btnNufusBilgisi,
-                   btnMutluluk,
-                   btnMuhimmat,
-                   btnKorucu,
-                   btnIssizlik,
+                 
                    btnHedefGrubu,
                    btnHedef,
-                   btnGocHizi,
+                 
                    btnBilgi,
                    btnGerceklesmisOlay
 

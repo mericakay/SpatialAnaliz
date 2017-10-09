@@ -131,15 +131,7 @@ namespace SpatialGeoAnalizProject
             reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                progressBar1.Minimum = 0;
-                progressBar1.Maximum = 100;
-                progressBar1.Step = 5;
-                progressBar1.Style = ProgressBarStyle.Continuous;
-
-                progressBar1.Value = 10;
-                progressBar1.Value = Convert.ToInt32( reader[0].ToString());
-                progressBar1.Show();
-                progressBar1.Visible = true;
+             
                 chart1.ChartAreas[0].AxisX.LabelStyle.Angle = -70;
                 chart1.Visible = true;
                 chart1.Series["Olasılık"].Points.Add(Convert.ToInt32(reader[0].ToString()));

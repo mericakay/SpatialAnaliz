@@ -130,19 +130,7 @@ namespace SpatialGeoAnalizProject
         }
         private void ucOlayAnaliz_Load(object sender, EventArgs e)
         {
-            comboBox1.Items.Add("");
-            comboBox1.Items.Add("1");
-            comboBox1.Items.Add("2");
-            comboBox1.Items.Add("3");
-            comboBox1.Items.Add("4");
-            comboBox1.Items.Add("5");
-            comboBox1.Items.Add("6");
-            comboBox1.Items.Add("7");
-            comboBox1.Items.Add("8");
-            comboBox1.Items.Add("9");
-            comboBox1.Items.Add("10");
-            comboBox1.Items.Add("11");
-            comboBox1.Items.Add("12");
+         
             hedefGrubuDoldur();
             hedefTipiDoldur();
 
@@ -168,29 +156,8 @@ namespace SpatialGeoAnalizProject
             string deger5 = Cmbil.SelectedValue.ToString();
             string deger6 = cmbOrgut.SelectedValue.ToString();
             string deger7 = cmbSilahliSilahsiz.SelectedValue.ToString();
-            string deger8 = textBox1.Text.ToString();
-            string deger9 = comboBox1.Text.ToString();
-          
-            if (deger8 == "")
-            {
-                deger8 = "";
-            }
-            else
-            {
-                 yil = Int32.Parse(deger8);
-            }
-
-            if (deger9 == "")
-            {
-                deger9 = "";
-            }
-            else
-            {
-                 ay = Int32.Parse(deger9);
-            }
-
-           
-            cmd.CommandText = "insert into public.info_params_olay (combobox1_id, combobox2_id , combobox3_id , combobox4_id , combobox5_id , combobox6_id , combobox7_id, yil, ay, tarih1, tarih2 ) values ( @combobox1_id, @combobox2_id , @combobox3_id , @combobox4_id , @combobox5_id , @combobox6_id , @combobox7_id , @yil, @ay, @tarih1, @tarih2) ";
+  
+            cmd.CommandText = "insert into public.info_params_olay (combobox1_id, combobox2_id , combobox3_id , combobox4_id , combobox5_id , combobox6_id , combobox7_id,  tarih1, tarih2 ) values ( @combobox1_id, @combobox2_id , @combobox3_id , @combobox4_id , @combobox5_id , @combobox6_id , @combobox7_id ,  @tarih1, @tarih2) ";
             cmd.Parameters.AddWithValue("@combobox1_id", cmbHedefGrubu.SelectedValue.ToString());
             cmd.Parameters.AddWithValue("@combobox2_id", cmbHedefTipi.SelectedValue.ToString());
             cmd.Parameters.AddWithValue("@combobox3_id", deger3);
@@ -198,8 +165,7 @@ namespace SpatialGeoAnalizProject
             cmd.Parameters.AddWithValue("@combobox5_id", Cmbil.SelectedValue.ToString() );
             cmd.Parameters.AddWithValue("@combobox6_id", cmbOrgut.SelectedValue.ToString());
             cmd.Parameters.AddWithValue("@combobox7_id", cmbSilahliSilahsiz.SelectedValue.ToString());
-            cmd.Parameters.AddWithValue("@yil", yil);
-            cmd.Parameters.AddWithValue("@ay", ay);
+
             cmd.Parameters.AddWithValue("@tarih1", date1.Value.Date);
             cmd.Parameters.AddWithValue("@tarih2", date2.Value.Date);
             cmd.ExecuteNonQuery();

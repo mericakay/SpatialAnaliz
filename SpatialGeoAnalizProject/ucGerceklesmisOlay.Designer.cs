@@ -57,9 +57,10 @@
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(22, 9);
+            this.label11.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label11.Location = new System.Drawing.Point(18, 8);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(68, 13);
+            this.label11.Size = new System.Drawing.Size(76, 15);
             this.label11.TabIndex = 33;
             this.label11.Text = "Olay Tanimi :";
             // 
@@ -67,9 +68,10 @@
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(23, 195);
+            this.label10.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label10.Location = new System.Drawing.Point(20, 194);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(65, 13);
+            this.label10.Size = new System.Drawing.Size(71, 15);
             this.label10.TabIndex = 32;
             this.label10.Text = "Ölü Sayısı  : ";
             // 
@@ -92,6 +94,7 @@
             // btnKaydet
             // 
             this.btnKaydet.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnKaydet.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnKaydet.Location = new System.Drawing.Point(115, 467);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(359, 101);
@@ -104,19 +107,21 @@
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(13, 257);
+            this.label9.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label9.Location = new System.Drawing.Point(5, 256);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(86, 13);
+            this.label9.Size = new System.Drawing.Size(101, 15);
             this.label9.TabIndex = 27;
-            this.label9.Text = "İstikbarat Tarih  :";
+            this.label9.Text = "İstihbarat  Tarih  :";
             // 
             // label8
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(28, 365);
+            this.label8.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label8.Location = new System.Drawing.Point(25, 364);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(56, 13);
+            this.label8.Size = new System.Drawing.Size(62, 15);
             this.label8.TabIndex = 26;
             this.label8.Text = "Açıklama :";
             // 
@@ -124,9 +129,10 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(23, 164);
+            this.label5.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(20, 163);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 13);
+            this.label5.Size = new System.Drawing.Size(72, 15);
             this.label5.TabIndex = 22;
             this.label5.Text = "Hedef Tipi : ";
             // 
@@ -134,9 +140,10 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(27, 133);
+            this.label4.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(24, 132);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 13);
+            this.label4.Size = new System.Drawing.Size(63, 15);
             this.label4.TabIndex = 28;
             this.label4.Text = "Olay Tipi : ";
             // 
@@ -144,9 +151,10 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 102);
+            this.label3.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(13, 101);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 13);
+            this.label3.Size = new System.Drawing.Size(85, 15);
             this.label3.TabIndex = 21;
             this.label3.Text = "Örgüt Seçiniz :";
             // 
@@ -154,9 +162,10 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 71);
+            this.label2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(19, 70);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 13);
+            this.label2.Size = new System.Drawing.Size(74, 15);
             this.label2.TabIndex = 20;
             this.label2.Text = "İlçe Seçiniz : ";
             // 
@@ -164,9 +173,10 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 40);
+            this.label1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(25, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.Size = new System.Drawing.Size(62, 15);
             this.label1.TabIndex = 19;
             this.label1.Text = "İl Seçiniz : ";
             // 
@@ -245,15 +255,17 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(14, 219);
+            this.label6.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(6, 217);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 26);
+            this.label6.Size = new System.Drawing.Size(100, 30);
             this.label6.TabIndex = 32;
             this.label6.Text = "Öldürülen Örgüt Üysei Sayısı :";
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.58974F));

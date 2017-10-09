@@ -74,18 +74,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(12, 74);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 13);
+            this.label1.Size = new System.Drawing.Size(72, 15);
             this.label1.TabIndex = 3;
             this.label1.Text = "Kullanıcı Adı";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(12, 134);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 13);
+            this.label2.Size = new System.Drawing.Size(32, 15);
             this.label2.TabIndex = 3;
             this.label2.Text = "Şifre";
             // 
